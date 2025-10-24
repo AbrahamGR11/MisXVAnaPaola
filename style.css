@@ -1,0 +1,814 @@
+/* Definición de la Paleta de Colores y Fuentes */
+:root {
+    --lavanda-magico: #E6E6FA;
+    --dorado-solar: #FFD700;
+    --purpura-real: #8A2BE2;
+    --marfil-luminoso: #FFFFF0;
+    --texto-oscuro: #4B0082; /* Un morado oscuro para el texto */
+    --font-titulos: 'Great Vibes', cursive;
+    --font-cuerpo: 'Playfair Display', serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-cuerpo);
+    background-color: var(--marfil-luminoso);
+    color: var(--texto-oscuro);
+    text-align: center;
+}
+
+section, header, footer {
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Estilos de Secciones Principales --- */
+
+.hero-section {
+    height: 100vh;
+    background-image: url('ana_paola_portada.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+    font-family: var(--font-titulos);
+    font-size: 8rem;
+    margin: 0;
+    color: var(--dorado-solar);
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-top: -20px;
+}
+
+.sun-emblem {
+    width: 100px;
+    margin-bottom: 20px;
+    animation: spin 10s linear infinite;
+}
+
+.quote-section {
+    padding: 40px 20px;
+    background-color: var(--marfil-luminoso);
+    text-align: center;
+}
+
+.quote-text {
+    font-family: var(--font-cuerpo);
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--texto-oscuro);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-separator {
+    padding: 5px 10px;
+    background-color: var(--marfil-luminoso);
+}
+
+.section-separator img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* --- Estilos para la Sección Unificada de Familia --- */
+
+.family-section {
+    padding: 60px 20px;
+    background-color: var(--marfil-luminoso);
+}
+
+/* El contenedor principal que enmarca todo */
+.family-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #EAD8E6;
+    border-radius: 15px;
+    background-color: #FFFAFE;
+    text-align: center;
+}
+
+/* Grupo de los padres */
+.parents-group p:first-child {
+    font-size: 1.2rem;
+    color: #888;
+}
+.parents-group h2 {
+    font-family: var(--font-cuerpo);
+    color: #A37A9A;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* La línea sutil que separa Padres de Padrinos */
+.subtle-divider {
+    border: none;
+    height: 1px;
+    background-color: #EAD8E6; /* Mismo color del borde */
+    width: 60%; /* No ocupa todo el ancho para ser más elegante */
+    margin: 40px auto; /* Espaciado vertical y centrado */
+}
+
+/* Grupo de los padrinos */
+.padrinos-group h2 {
+    font-family: var(--font-cuerpo);
+    color: #A37A9A;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* Reglas existentes que siguen funcionando */
+.padrinos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.padrino-couple {
+    flex: 1;
+    min-width: 250px;
+}
+
+.vertical-divider {
+    height: 120px;
+    width: auto;
+}
+
+/* Estilos de los Nombres (sin cambios, pero asegúrate de tenerlos) */
+.family-container .names {
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    color: var(--purpura-real);
+    margin: 5px 0;
+}
+
+.padrino-couple .names {
+    font-size: 2rem;
+}
+
+.family-container .ampersand {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    color: #888;
+    margin: 10px 0;
+}
+
+.vertical-divider {
+    height: 120px;
+    width: auto;
+}
+
+.agenda-section {
+    background-color: var(--lavanda-magico);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.agenda-item {
+    flex-basis: 400px; /* Un poco más de espacio para la dirección */
+}
+
+.map-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--dorado-solar);
+    color: var(--texto-oscuro);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.map-button:hover {
+    transform: scale(1.1);
+}
+
+.countdown-section {
+    background-color: var(--purpura-real);
+    color: var(--marfil-luminoso);
+}
+
+#countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+#countdown-timer span {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--dorado-solar);
+}
+
+.gallery-section {
+    background-color: var(--marfil-luminoso);
+}
+
+.gallery-section h2 {
+    color: var(--purpura-real);
+    font-family: var(--font-titulos);
+    font-size: 3rem;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gallery-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.rsvp-section {
+    background-color: var(--lavanda-magico);
+}
+/* --- Estilos para el Botón de Confirmación (El Pase Dorado) --- */
+
+.rsvp-section button {
+    font-family: var(--font-cuerpo);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    border-radius: 50px; /* Bordes más redondeados para un look suave */
+    
+    /* El cambio a color sólido y dorado */
+    background-color: var(--dorado-solar);
+    color: var(--texto-oscuro); /* Texto oscuro para contraste sobre el dorado */
+    border: 2px solid #DAA520; /* Un borde dorado un poco más oscuro */
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Para alinear el icono y el texto */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* La animación mágica de pulso */
+    animation: pulse-animation 2s infinite ease-in-out;
+}
+
+.rsvp-section button:hover {
+    transform: scale(1.05); /* Se hace un poco más grande al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icono de WhatsApp dentro del botón */
+.rsvp-section button i {
+    font-size: 1.5rem; /* Hacemos el icono un poco más grande */
+}
+
+/* Definición de la animación de pulso */
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(255, 215, 0, 0.7); /* Brilla más en la mitad */
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+}
+
+.footer-section {
+    background-color: var(--marfil-luminoso);
+}
+
+.final-thanks {
+    font-family: var(--font-titulos);
+    font-size: 3rem;
+    color: var(--purpura-real);
+    margin-top: 30px;
+}
+
+/* --- Animaciones y Extras --- */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* --- ESTILOS PARA ADAPTACIÓN MÓVIL (VISTA DE CELULAR) --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .padrinos-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .vertical-divider {
+        display: none;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    .gallery-thumbnail {
+        height: 120px;
+    }
+
+    #countdown-timer {
+        font-size: 1.2rem; /* Reduce el tamaño del texto (Días, Horas, etc.) */
+        gap: 15px; /* Reduce el espacio entre cada elemento */
+    }
+
+    #countdown-timer span {
+        font-size: 2.5rem; /* Reduce el tamaño de los números */
+    }
+
+}
+
+
+/* --- Estilos para la Nueva Sección de Música --- */
+
+#music-section {
+    padding: 50px 20px;
+    background-color: var(--lavanda-magico); /* Fondo suave para destacar la sección */
+    text-align: center;
+}
+
+.music-player-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.5); /* Un fondo blanco semitransparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#music-section h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    color: var(--purpura-real);
+    margin: 0 0 15px 0;
+}
+
+.lantern-icon {
+    width: 80px;
+    height: auto;
+    margin: 10px 0;
+    /* La animación se aplicará con JavaScript */
+    transition: transform 10s linear; 
+}
+
+/* Clase que añadiremos con JS para hacer girar la linterna */
+.lantern-icon.spinning {
+    animation: spin 20s linear infinite;
+}
+
+.song-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+.song-artist {
+    font-size: 1rem;
+    margin: 5px 0 20px 0;
+    color: #888;
+}
+
+/* --- Estilos para los Controles de Música (Iconos de Reproductor) --- */
+
+.controls-wrapper {
+    display: flex; /* Para alinear los botones horizontalmente */
+    justify-content: center; /* Centra los botones en el contenedor */
+    align-items: center;
+    gap: 15px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+.control-button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: var(--purpura-real); /* Color de los iconos */
+    font-size: 2rem; /* Tamaño de los iconos */
+    cursor: pointer; /* Indica que son clicables, aunque sean inactivos */
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+/* Estilo para los botones inactivos (las flechas) */
+.control-button.inactive {
+    color: #A37A9A; /* Un color más grisáceo para indicar inactividad */
+    cursor: default; /* Cambia el cursor para indicar que no son clicables */
+    pointer-events: none; /* Deshabilita por completo la interacción con el mouse */
+}
+
+/* Ajustes para el botón principal de reproducir/pausar */
+#main-music-button {
+    background-color: var(--dorado-solar);
+    color: var(--texto-oscuro);
+    border: none;
+    border-radius: 50%;
+    width: 70px; /* Un poco más grande para el botón central */
+    height: 70px;
+    font-size: 1.8rem; /* Icono un poco más grande */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#main-music-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* --- Estilos para la Nueva Sección "Save the Date" (con nuevo acomodo) --- */
+
+.save-the-date-section {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #fdf5e6 0%, #E6E6FA 100%);
+}
+
+.date-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background-color: #FFFAF0;
+    border: 2px solid var(--dorado-solar);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.15);
+    text-align: center;
+    position: relative;
+}
+
+.date-sun-emblem {
+    width: 60px; /* Un poco más pequeño para dar más espacio al texto */
+    height: auto;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+.date-intro {
+    font-family: var(--font-cuerpo); /* Cambiado a una fuente más legible */
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--texto-oscuro);
+    margin: 0 0 20px 0;
+}
+
+.date-weekday {
+    font-family: var(--font-cuerpo);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #A37A9A;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.date-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.date-day-number {
+    font-family: var(--font-cuerpo);
+    font-weight: normal;
+    font-size: 6rem; /* Número grande y protagonista */
+    color: var(--dorado-solar);
+    text-shadow: 2px 2px 4px rgba(139, 101, 8, 0.3);
+    line-height: 1;
+}
+
+.date-vertical-line {
+    width: 2px;
+    height: 80px; /* Altura de la línea */
+    background-color: #D2B48C; /* Color arena/dorado suave */
+}
+
+.date-month-year {
+    text-align: left; /* Alineamos el texto a la izquierda de su contenedor */
+}
+
+.date-month-text,
+.date-year-text {
+    font-family: var(--font-cuerpo);
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--purpura-real);
+    display: block;
+    line-height: 1.2;
+}
+
+/* --- Estilos para los Iconos de la Agenda (Versión con Imágenes PNG) --- */
+
+.agenda-icon-img {
+    display: block; /* Asegura que la imagen ocupe su propia línea */
+    width: 60px; /* Define el ancho del icono. Puedes ajustarlo a tu gusto */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto 20px auto; /* Centra la imagen y le da espacio abajo */
+}
+
+/* --- Estilos para el Lightbox (Galería de Fotos Ampliable) --- */
+
+.lightbox-overlay {
+    /* Ocupa toda la pantalla y se superpone a todo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo negro semitransparente */
+    display: flex; /* Para centrar la imagen */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Asegura que esté por encima de todo */
+    opacity: 0; /* Inicialmente invisible */
+    visibility: hidden; /* Inicialmente no interactuable */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.lightbox-overlay.active {
+    opacity: 1; /* Visible cuando está activo */
+    visibility: visible; /* Interactuable cuando está activo */
+}
+
+#lightbox-img {
+    max-width: 90%; /* Máximo 90% del ancho de la pantalla */
+    max-height: 90%; /* Máximo 90% del alto de la pantalla */
+    object-fit: contain; /* Asegura que la imagen quepa sin cortarse */
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(0.9); /* Empieza un poco más pequeña */
+    transition: transform 0.3s ease-in-out;
+}
+
+.lightbox-overlay.active #lightbox-img {
+    transform: scale(1); /* Crece al tamaño normal al activarse */
+}
+
+
+.lightbox-close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    line-height: 1;
+    z-index: 2001; /* Por encima de la imagen */
+    transition: color 0.2s ease-in-out;
+}
+
+.lightbox-close-button:hover {
+    color: var(--dorado-solar); /* Dorado al pasar el ratón */
+}
+
+/* --- Estilos para la Foto Intermedia (Efecto Parallax) --- */
+
+.parallax-section {
+    /* Altura de la sección. 60vh = 60% del alto de la pantalla */
+    height: 60vh;
+    
+
+    /* La imagen que quieres mostrar */
+    background-image: url('foto_int.jpg'); /* <-- ¡CAMBIA ESTO POR EL NOMBRE DE TU FOTO! */
+
+    /* La magia del parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* --- Estilos para la Nueva Sección de Detalles (Diseño Simplificado) --- */
+
+.details-section {
+    padding: 40px 20px;
+    background-color: var(--marfil-luminoso);
+}
+
+/* Contenedor enmarcado para cada tarjeta */
+.detail-container {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    padding: 30px;
+    background-color: #FFFAFE;
+    border: 1px solid #EAD8E6;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.detail-title {
+    font-family: var(--font-titulos);
+    font-size: 3rem;
+    color: var(--purpura-real);
+    margin: 0 0 30px 0;
+}
+
+/* Contenedor para los iconos juntos */
+.unified-icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-icon-img {
+    height: 140px; /* Ajusta la altura de los iconos a tu gusto */
+    width: auto; /* Mantiene la proporción */
+    vertical-align: middle; /* Para asegurar que estén bien alineados si hubiera texto */
+}
+
+/* Estilo para el texto "FORMAL" */
+.detail-main-text {
+    font-family: var(--font-cuerpo);
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--purpura-real);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0 25px 0;
+}
+
+/* Nota de colores reservados */
+.reserved-colors-note {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: var(--lavanda-magico);
+    border-radius: 8px;
+    border: 1px solid var(--purpura-real);
+}
+
+.reserved-colors-note p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--texto-oscuro);
+    line-height: 1.5;
+}
+
+/* --- Estilos para la Tarjeta de Regalo (con iconos múltiples) --- */
+
+/* Ajustamos el texto elegante */
+.gift-text-elegant {
+    font-family: var(--font-cuerpo);
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0; /* Quitamos márgenes extra */
+}
+
+/* Ocultamos el texto "¡Lluvia de sobres!" que ya no se usa */
+.gift-text-main {
+    display: none;
+}
+
+/* Contenedor para los iconos de regalo */
+.gift-icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espacio entre los dos iconos */
+    margin-top: 30px; /* Espacio después del texto */
+}
+
+/* Estilo para los iconos (reemplaza a .large-icon) */
+.gift-icon-large {
+    font-size: 3.5rem; /* Tamaño de los iconos */
+    color: var(--purpura-real); /* El color de tu tema */
+    transition: transform 0.3s;
+}
+
+.gift-icon-large:hover {
+    transform: scale(1.1); /* Efecto sutil al pasar el mouse */
+}
+
+
+/* --- Estilos para la Foto Intermedia (Foto Enmarcada) --- */
+.framed-photo-section {
+    padding: 60px 20px;
+    background-color: var(--marfil-luminoso);
+    text-align: center;
+}
+.photo-frame {
+    display: inline-block;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #EAD8E6;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.photo-frame img {
+    display: block;
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 5px;
+}
+.photo-caption {
+    margin-top: 25px;
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    color: var(--purpura-real);
+    opacity: 0.9;
+}
+
+/* --- Estilos para la Foto Intermedia 3 (Parallax) --- */
+.parallax-section-2 {
+    height: 60vh;
+    background-image: url('foto_int_3.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* --- Estilos para la Foto Intermedia (Foto Enmarcada) --- */
+.framed-photo-section {
+    padding: 40px 20px 10px 20px;
+    background-color: var(--marfil-luminoso);
+    text-align: center;
+}
+
+.photo-frame {
+    display: inline-block;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #EAD8E6;
+    border-radius: 10px;
+    box-shadow: 0 3px 30px rgba(0, 0, 0, 0.15);
+}
+
+.photo-frame img {
+    display: block;
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 5px;
+}
